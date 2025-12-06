@@ -48,10 +48,14 @@ document.addEventListener('visibilitychange', async () => {
     if (document.visibilityState === 'visible' && fullscreen() && wakeLock !== null) {
         enableWakeLock();
     }
+    return true;
 });
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    const oldCanvas = document.querySelector('#canvasContainer canvas');
+    if (oldCanvas) oldCanvas.remove();
+    const cnv = createCanvas(windowWidth, windowHeight);
+    cnv.parent('canvasContainer');  // attach canvas to container
     fileInput = createFileInput(handleFile);
     fileInput.hide();
     diagonal = sqrt(width * width + height * height);
@@ -137,7 +141,7 @@ function touchStarted() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    //resizeCanvas(windowWidth, windowHeight);
     if (stars.length > 0) {
         diagonal = sqrt(width * width + height * height)
         stars = Array.from({ length: diagonal / 5 }, () => new Star());
