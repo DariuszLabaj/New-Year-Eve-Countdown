@@ -1,0 +1,5 @@
+const LOADING = 0;
+const LONG_COUNTDOWN = 1;
+const SHORT_COUNTDOWN = 2;
+const FIREWORKS_START = 3;
+const FIREWORKS_VIEW = 4;
