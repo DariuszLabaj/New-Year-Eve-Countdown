@@ -53,10 +53,11 @@ function saveActivities() {
             activities,
             availableActivities,
             currentActivity,
-            nextActivity,
-            activityImages
+            nextActivity
+            // activityImages
         })
     );
+    console.log("Saved activities to localStorage");
 }
 
 function loadSavedActivities() {
@@ -68,7 +69,7 @@ function loadSavedActivities() {
         availableActivities = state.availableActivities;
         currentActivity = state.currentActivity;
         nextActivity = state.nextActivity;
-        activityImages = state.activityImages || {};
+        // activityImages = state.activityImages || {};
 
         console.log("Loaded activities from localStorage");
     }
