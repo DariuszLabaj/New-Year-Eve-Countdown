@@ -1,5 +1,3 @@
-let activityImages = {}; // keyed by activity id
-
 let activityUI = {
   loadBtn:  { x: 340, y: -160, w: 180, h: 40 },
   rerollBtn:{ x: 340, y: -110, w: 180, h: 40 },
@@ -65,7 +63,7 @@ function drawActivityUI(w, h, pb, pl) {
   pop();
 }
 
-function drawActivity(a, x, y, w, h, isNedxt=false){
+function drawActivity(a, x, y, w, h){
   push();
   rectMode(CORNER)
   
