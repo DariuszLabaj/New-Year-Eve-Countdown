@@ -141,7 +141,7 @@ function touchStarted() {
 }
 
 function windowResized() {
-    //resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(windowWidth, windowHeight);
     if (stars.length > 0) {
         diagonal = sqrt(width * width + height * height)
         stars = Array.from({ length: diagonal / 5 }, () => new Star());
