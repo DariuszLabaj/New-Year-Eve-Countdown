@@ -41,7 +41,7 @@ function updateActivityUIPositions(x, y, w, h) {
 function drawActivityUI(w, h, pb, pl) {
   push();
   noStroke();
-  fill("#16130baa");        // semi-transparent black bg
+  fill("#343027aa");        // semi-transparent black bg
   rect(pl, height - h - pb, w, h, 10);
   const margin = 10;
 
@@ -50,7 +50,7 @@ function drawActivityUI(w, h, pb, pl) {
 
   textAlign(LEFT, TOP);
   textSize(16);
-  fill("#cfc6b4");
+  fill("#f8f0e2");
   wrapTextInBox(strings.Activities, x, y, w);
   // Current & next info
   textSize(12);
@@ -106,7 +106,7 @@ function drawActivity(a, x, y, w, h) {
   }
 
   noStroke();
-  fill("#cfc6b4");
+  fill("#f8f0e2");
   textSize(18);
   wrapTextInBox(
     a.displayName,
@@ -122,9 +122,9 @@ function drawButton(b, label) {
     mouseY > b.y && mouseY < b.y + b.h;
   push();
   if (isHover) {
-    fill("#dfffdf");
-  } else {
     fill("#e2c46d");
+  } else {
+    fill("#ffe087");
     // fill(80, 140, 230);
   }
 
@@ -132,7 +132,7 @@ function drawButton(b, label) {
 
   noStroke();
   drawingContext.shadowBlur = 0;
-  fill("#3c2f00");
+  fill("#574500");
   textAlign(CENTER, CENTER);
   textSize(14);
 
